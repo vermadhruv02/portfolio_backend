@@ -9,7 +9,9 @@ export const findAll = async (req, res) => {
     res.status(200).json({
       status: 200,
       success: true,
-      data: projects,
+      project: projects,
+      message:	"Project fetching successfully!",
+      count: projects.length,
     });
   } catch (error) {
     console.error("Error finding projects:", error);
