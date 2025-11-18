@@ -5,6 +5,7 @@ dotenv.config();
 
 import projectRoutes from './routes/project.routes.js';
 import authRoutes from './routes/auth.routes.js';
+import contactRoutes from './routes/contact.routes.js';
 
 const app = express();
 const PORT = process.env.PORT;
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
 });
 app.use('/api/projects', projectRoutes);
 app.use('/api/auth', authRoutes);
-
+app.use('/api/contacts', contactRoutes);
 
 // Start the server
 app.listen(PORT, () => {
